@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2014 PayPal. All rights reserved. -->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="fr.papam.cordova.nfc.emv"
+        version="1.0.0">
+    <name>EmvNfc</name>
+    <description>This plugin allows to scan public data in credit card through NFC</description>
+    <engines>
+        <engine name="cordova" version="&gt;=3.0.0"/>
+    </engines>
+
+
+    <js-module src="www/cdv-plugin-emv-nfc.js" name="EmvNfc">
+        <clobbers target="EmvNfc"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="EmvNfc">
+                <param name="android-package" value="fr.papam.cordova.nfc.emv.EmvNfcCordovaPlugin"/>
+            </feature>
+
+
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.NFC"/>
+
+            <uses-feature
+                    android:name="android.hardware.nfc"
+                    android:required="false"/>
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.nfc.action.TECH_DISCOVERED" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+        </config-file>
+
+        <source-file src="src/android/EmvNfcCordovaPlugin.java" target-dir="src/fr/papam/cordova/nfc/emv"/>
+        <source-file src="src/android/Provider.java" target-dir="src/fr/papam/cordova/nfc/emv"/>
+        <source-file src="src/android/EmvParser.java" target-dir="src/fr/papam/cordova/nfc/emv"/>
+        <source-file src="src/android/ResponseUtils.java" target-dir="src/fr/papam/cordova/nfc/emv"/>
+        <source-file src="src/android/libs/emv-paycard-library-2.1.2.jar" target-dir="libs"/>
+        <source-file src="src/android/libs/commons-collections4-4.0.jar" target-dir="libs"/>
+        <source-file src="src/android/libs/commons-lang3-3.1.jar" target-dir="libs"/>
+    </platform>
+
+</plugin>

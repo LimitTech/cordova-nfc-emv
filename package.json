@@ -1,0 +1,55 @@
+{
+  "_from": "fr.papam.cordova.nfc.emv",
+  "_id": "fr.papam.cordova.nfc.emv@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-1VxRYyqPcr7GLpNcNMa5bfRQCN2W1EJBQES3/9JrfIrdAChd8VaTozaryQxcRPONX3wjznAkwJrfFhzzu+cjiQ==",
+  "_location": "/fr.papam.cordova.nfc.emv",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "fr.papam.cordova.nfc.emv",
+    "name": "fr.papam.cordova.nfc.emv",
+    "escapedName": "fr.papam.cordova.nfc.emv",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/fr.papam.cordova.nfc.emv/-/fr.papam.cordova.nfc.emv-1.0.0.tgz",
+  "_shasum": "21d02b01351b1ac363fb0d040782bc66010989f7",
+  "_spec": "fr.papam.cordova.nfc.emv",
+  "_where": "C:\\Users\\joanc\\Desenvolupament\\playground\\stripe\\src-cordova",
+  "author": {
+    "name": "papam.fr"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "fr.papam.cordova.nfc.emv",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "This plugin allows to scan public data in credit card through NFC",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "keywords": [
+    "NFC",
+    "EMV",
+    "sdk",
+    "card-scanning",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "name": "fr.papam.cordova.nfc.emv",
+  "types": "./types/index.d.ts",
+  "version": "1.0.0"
+}
